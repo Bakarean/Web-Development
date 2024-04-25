@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<head>
+<style>
+    body{text-align: center;
+     font-family:tahoma;
+}
+    header{letter-spacing: 6px;
+      background-color: royalblue;
+      padding: 20px;
+      color: white;
+}
+    section{padding: 30px;
+           margin-bottom: 40px;
+}
+    h2{font-size: 3em;
+    width: 100%;
+}
+    .container{ display: flex;
+              justify-content: center;
+              flex-wrap: wrap;
+}
+@media screen and (min-width: 50em){
+    .card{border: 1px solid #ccc;
+          background-color: red;
+          paddind: 25px;
+          margin: 25px;
+          flex-basis: 325px;
+          box-shadow: 6px 6px 6px rgba(0,0,0,0.6);
+}
+header h1{font-size: 5em;
+  }
+}
+    .icon{font-size: 8em; 
+          padding: 25px;
+}
+     button, .container{margin: 10px;
+                        text-align: center;
+
+}
+     button, .button{background-color: royalblue;
+                     border: 0;
+                     color: white;
+                      padding: 10px;
+                     width: 100%;
+                     margin-bottom: 10px;
+}
+
+    .blue{background: teal
+}
+   div{font-size: 40px;
+}
+   footer{text-align: center;
+          padding: 30px;
+          background-color: grey;
+} 
+   td{padding: 10px;
+      color: green;
+}
+   table{margin: 0auto;
+}
+   #my-order{background-color: #29C1C4;
+             padding: 25px;
+             display: none;
+}
+        .circle { color: white; font-size: 2.5em;
+                 display: inline-block; 
+                 height: 40px; width: 40px; 
+                 margin: 15px; 
+                  border-radius: 50%; 
+                   background: black;
+                  padding: 5px 10px 15px 10px;
+                   font-family: helvetica; 
+}
+      .icon{font-size: 130px;
+}
+
+</style>
+</head>
+<body>
+<header>
+     <h1>A.M.B Industries Inc.</h1>
+   <h4>Where your needs comes first</h4>
+</header>
+<section>
+<h2> Welcome </h2>
+<section class="blue container">
+<h2>OUR SERVICES://</h2>
+<article class="card">
+<div class="icons">&#9888;
+</div>
+<h3>Ahmad Muhammad</h3>
+<p>CEO/manager of A.M.B industries</P>
+</article>
+<article class="card">
+<div class="icon">&#9917</div>
+<h3>History</h3>
+<p>The company has surpassed many existing organisations in the past.</p>
+</article>
+</section>
+<section>
+<h2>MY ORDER FORM:</h2>
+<form id="my-form"><table>
+  <tr>
+<td>Name:</td>
+<td><input type="text" size"25" name=my-name></td>
+</tr>
+   <tr>
+<td>Address:</td>
+<td><input type="text" size"25" name=my-address></td>
+</tr>
+   <tr>
+<td>Favourite Juice:</td>
+<td><input type="text" size"25" name=my-favouritejuice></td>
+</tr>
+  <tr><td>Quantity:</td>
+<td><input type="text" size"25" name=my-quantity>
+     <input type="number" name="my-quantity" value="1" min="1" max="5">
+<small>max 5</small</td>
+ </tr>
+<tr>
+<td colspan="2">
+<input class="button"
+type="button"
+value="Process Order"
+onclick="placeOrder();">
+<input class="button"
+type="reset"
+value="clear"></td>
+</tr>
+</table>
+<div id="my-order"></div>
+</form>
+</section>
+<p> A.M.B Industries is a place where your needs comes first, It is a place where
+you can get all your needs from food to wears to furnitures and bathroom appliances
+even kitchen utensils.</P>
+<h2>VISION:</h2>
+<p>To make sure every customer is satisfied with what we provide</p><br><br>
+<h2>ABOUT US:</h2>
+<p>Founded in the year 2000, by Ahmad Muhammad Bakry.We've sereved over 1000
+clients worlwide.</p>
+</section>
+<div class="footer">
+<h3>Thanks for visiting</h3>
+<div class="container"><article class="card"><h3>Get in touch</h3>
+<p>Probably the best place to buy stuff in nigeria.</p></article>
+<article class="card"><h3>Contact Us</h3>
+<p>We would love to hear from you
+<br>Call or email us<br>
+Mobile:12345<br>
+Tel:0987</p></article></div>
+</div>
+<script>
+function placeOrder() {var formResults=document.getElementById("my-form")
+          results="<h3>Success</h3>Here is your order";
+          results+="<br>Name:" + formResults.elements["my-name"].value;
+           results+="<br>Address:" + formResults.elements["my-address"].value;
+           results+="<br>Favourite juice:" + formResults.elements["my-favouritejuice"].value;
+           results+="<br>Quantity:" + formResults.elements["my-quantity"].value;
+          var orderForm=document.getElementById("my-order")
+          orderForm.style.display="block";
+          orderForm.innerHTML=results;
+}                  
+</script>
+<footer>
+<div class="circle">A</div>
+ <div class="circle">M</div>
+ <div class="circle">B</div>
+CO
+&copy COPYRIGHT[A.M.B industries]
+</footer>
+</body>
